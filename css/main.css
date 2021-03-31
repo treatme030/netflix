@@ -99,7 +99,8 @@
 }
 
 .hero-text-box h1,
-.hero-text-box h2 {
+.hero-text-box h2,
+.hero-text-box form {
     max-width: 800px;
     margin: 0 auto;
 }
@@ -107,8 +108,6 @@
 .hero-text-box form {
     display: flex;
     flex-direction: column;
-    max-width: 800px;
-    margin: 0 auto;
     padding-top: 0.85rem;
 }
 
@@ -178,12 +177,6 @@
 }
 
 /* TV */
-.text-box {
-    width: 52%;
-    height: 100%;
-    padding: 0 3rem 0 0;
-}
-
 .text-box h1 {
     font-size: 3.125rem;
     margin-bottom: 0.5rem;
@@ -193,18 +186,9 @@
     margin: 0.75em 0 0.25em;
 }
 
-.img-box {
-    position: relative;
-    width: 48%;
-    height: 100%;
-    display: flex;
-    overflow: hidden;
-}
-
 .img-box img {
     position: relative;
     max-width: 100%;
-    height: auto;
     z-index: 2;
 }
 
