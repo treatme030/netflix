@@ -1,4 +1,40 @@
+//hero 슬라이드
+let slides = document.getElementsByClassName('slide');
+let currentidx = 0;
 
+slideShow(0);
+
+function slideShow(target){
+    for(let i = 0;i < slides.length;i++){
+        if(i != target){
+            slides[i].classList.remove('visible');
+        }else{
+            slides[target].classList.add('visible');
+        }
+    }
+    
+}
+
+setInterval(function(){
+    let nextidx = (currentidx + 1) % slides.length;
+    slideShow(nextidx);
+    currentidx = nextidx;
+}, 4000);
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+//아코디언 메뉴
 //css에서 li에 open class와 close class
 //각각 작성해서 html에 close class으로 초기값 설정
 let item = document.getElementsByClassName('faq-item');
@@ -19,3 +55,4 @@ function toggle(){
         this.parentNode.className = 'faq-item open';
     }
 }
+
