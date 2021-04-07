@@ -63,3 +63,15 @@ function toggle(){
     }
 }
 
+//select language change 이벤트
+//select 변경시 변경된 언어 사이트로 이동
+let lang = document.getElementById('language');
+
+lang.addEventListener('change', function(){
+    if(this.value == 'en'){
+        document.location = 'https://www.netflix.com/kr-en/';
+    } else {
+        document.location = 'https://www.netflix.com/kr/';
+    }
+    
+});
