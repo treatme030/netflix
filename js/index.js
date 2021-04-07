@@ -71,7 +71,7 @@ lang.addEventListener('change', function(){
     if(this.value == 'en'){
         document.location = 'https://www.netflix.com/kr-en/';
     } else {
-        document.location = 'https://www.netflix.com/kr/';
+        document.location = 'https://treatme030.github.io/netflix/';
     }
     
 });
