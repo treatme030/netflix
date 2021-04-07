@@ -15,7 +15,7 @@
 }
 
 .header {
-    position: fixed;
+    position: absolute;
     top: 0.5rem;
     left: 0;
     right: 0;
@@ -27,11 +27,19 @@
     margin: 0 3.5rem;
 }
 
-.header .logo-wrap {
+/*.header .logo-wrap {
     display: block;
     fill: #e50914;
     line-height: normal;
     margin-right: auto;/*나란히 있던 다른 요소를 오른쪽으로 다 밀어버림*/
+/* }  */
+
+.header .logo-wrap {
+    position: fixed;
+    top: 20px;
+    left: 3.5rem;
+    fill: #e50914;
+    line-height: normal;
 }
 
 .logo {
@@ -39,7 +47,15 @@
     height: 2.8125rem;
 }
 
+/* .header-right {
+    display: inline-flex;
+    align-items: center;
+} */
+
 .header-right {
+    position: fixed;
+    top: 20px;
+    right: 3.5rem;
     display: inline-flex;
     align-items: center;
 }
@@ -78,7 +94,12 @@
     .header {
         margin: 0 45px;
     }
-    
+    .header .logo-wrap {
+        left: 45px;
+    }
+    .header-right {
+        right: 45px;
+    }
 }
 
 @media only screen and (min-width: 550px) and (max-width: 949px), 
@@ -98,6 +119,12 @@ only screen and (min-width: 350px) and (max-width: 399px),
 only screen and (max-width: 349px) {
     .header {
         margin: 0 5%;
+    }
+    .header .logo-wrap {
+        left: 5%;
+    }
+    .header-right {
+        right: 5%;
     }
     .logo {
         width: auto;
@@ -304,10 +331,12 @@ only screen and (max-width: 349px) {
 .text-box h1 {
     font-size: 3.125rem;
     margin-bottom: 0.5rem;
+    opacity: 0;
 }
 
 .text-box h2 {
     margin: 0.75em 0 0.25em;
+    opacity: 0;
 }
 
 .img-box img {
@@ -493,7 +522,7 @@ only screen and (max-width: 349px) {
     border: 0;
     text-align: left;
     color: #fff;
-    background: #303030;
+    /* background: #303030; */
     cursor: pointer;
 }
 
@@ -505,7 +534,7 @@ only screen and (max-width: 349px) {
     width: 1em;
     fill: #fff;
     transform: translateY(-50%) rotate(-45deg);
-    transition: .2s;
+    transition: .3s;
 }
 
 .open .svg-icon {
@@ -516,7 +545,7 @@ only screen and (max-width: 349px) {
     width: 1em;
     fill: #fff;
     transform: translateY(-50%);
-    transition: .2s;
+    transition: .3s;
 }
 
 .open .faq-answer {
@@ -524,18 +553,19 @@ only screen and (max-width: 349px) {
     font-size: 1.625rem;
     font-weight: 400;
     text-align: left;
-    background: #303030;
-    transition: .2s;
+    /* background: #303030; */
+    transition: max-height .3s ease-in-out;
 }
 
 .close .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: .2s;
+    transition: max-height .3s ease-in-out;
 }
 
 .faq-answer span {
     display: inline-block;
+    text-align: left;
     padding: 1.2em;
 }
 
@@ -608,6 +638,11 @@ footer .inner .site-footer .footer-link li {
 
 footer .inner .site-footer .footer-link li a {
     color: #757575;
+    transition: color .2s;
+}
+
+footer .inner .site-footer .footer-link li a:hover {
+    color: #fff;
 }
 
 footer .inner .site-footer .lang {
@@ -643,16 +678,21 @@ footer .inner .site-footer .lang select {
     margin-top: 24px;
 }
 
+footer .netflix-text {
+    color: #e50914;
+}
+
 .copy-text,
 .copy-text a {
     color: grey;
     margin: 20px 0;
     font-size: .75em;
     line-height: 1em;
+    transition: .2s;
 }
 
 .copy-text a:hover {
-    text-decoration: underline;
+    color: #fff;
 }
 
 .copy-text div~div {
