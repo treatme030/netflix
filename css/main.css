@@ -171,7 +171,7 @@ only screen and (max-width: 349px) {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 15%;
+    object-position: 70% 15%;
     opacity: 0;
     transition: .2s;
 }
@@ -509,6 +509,7 @@ only screen and (max-width: 349px) {
     font-size: 1.625rem;
     font-weight: 400;
     margin: 0 0 8px 0;
+    border-bottom: 2px solid #222;
 }
 
 .faq-list .faq-item .btn {
