@@ -4,6 +4,17 @@
     src: url(../font/NetflixSans_W_Md.woff2) format("woff2");
 }
 
+@keyframes slideUp {
+    0% {
+        transform: translateY(80%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 html,
 body {
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
