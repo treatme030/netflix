@@ -12,7 +12,6 @@ function slideShow(target){
             slides[target].classList.add('visible');
         }
     }
-    
 }
 
 setInterval(function(){
@@ -22,16 +21,24 @@ setInterval(function(){
 }, 4000);
     
 
+//text slideUp animation
+let screenHeight = window.innerHeight;
 
-
-
-
-
-
-
-
-
-
+window.addEventListener('scroll', function(){
+    let scroll = window.pageYOffset;
+    if(scroll > 100){
+        document.querySelector('#tv h1').style = 'animation: slideUp 2s both;';
+        document.querySelector('#tv h2').style = 'animation: slideUp 2s .2s both;';
+    }
+    if(scroll > document.querySelector('#download').offsetTop - screenHeight + 100){
+        document.querySelector('#download h1').style = 'animation: slideUp 2s both;';
+        document.querySelector('#download h2').style = 'animation: slideUp 2s .8s both;';
+    }
+    if(scroll > document.querySelector('#device').offsetTop - screenHeight + 150){
+        document.querySelector('#device h1').style = 'animation: slideUp 2s both;';
+        document.querySelector('#device h2').style = 'animation: slideUp 2s .6s both;';
+    }
+});
 
 
 //아코디언 메뉴
