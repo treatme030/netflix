@@ -658,7 +658,7 @@ footer .inner .site-footer .lang select {
     background-image: none;
     border: 1px solid #333;
     color: #999;
-    padding: 12px 26px 12px 50px;
+    padding: 12px 26px 12px 60px;
 }
 
 .lang:before {
@@ -671,6 +671,19 @@ footer .inner .site-footer .lang select {
     background-image: url(../img/icon/baseline_language_white_18dp.png);
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.lang:after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icon/baseline_arrow_drop_down_white_18dp.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
 }
 
 .footer-country {
