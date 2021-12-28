@@ -1,4 +1,4 @@
-# 📽 NEXFLIX 사이트 redesign(https://github.com/treatme030/netflix)
+## 📽 NEXFLIX 사이트 [redesign](https://github.com/treatme030/netflix)
 
 ## 랜딩 페이지
  * 이미지 슬라이드
